@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -16,16 +16,11 @@ a:hover {
 }
 
 header {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  max-width: 960px;
+  background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
 }
 header .mini-menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   line-height: 40px;
 }
@@ -35,21 +30,27 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
   text-decoration: none;
   list-style: none;
   margin: 5px 10px;
-  padding: 0;
+}
+header .mini-menu .logo img {
+  width: 75px;
+  height: 20px;
 }
 
-.logo {
+.main-logo {
   display: flex;
   flex: 2 1 auto;
 }
-.logo i, .logo li {
+.main-logo i, .main-logo li {
   margin: 0 5px;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 .admin {
   display: flex;
   flex-direction: row;
-  flex: 1 1;
   font-size: 12px;
 }
 .admin img {
@@ -58,6 +59,66 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .mini-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-start;
+    align-self: auto;
+  }
+  .mini-menu .main-logo {
+    display: none;
+  }
+  .mini-menu .logo-mobile {
+    display: flex;
+    order: 3;
+    flex: 0 1 auto;
+  }
+  .mini-menu .logo-mobile .fa-bars::before {
+    font-size: 25px;
+  }
+  .mini-menu .logo-mobile .admin {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+  .mini-menu .logo-mobile .logo {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .mini-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-start;
+    align-self: auto;
+  }
+  .mini-menu .logo {
+    display: none;
+  }
+  .mini-menu .logo-mobile {
+    display: flex;
+    order: 1;
+    flex: 0 1 auto;
+  }
+  .mini-menu .logo-mobile .fa-bars::before {
+    font-size: 25px;
+  }
+  .mini-menu .logo-mobile .admin {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
