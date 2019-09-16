@@ -103,6 +103,8 @@ header h1 {
 
 @media (min-width: 481px) and (max-width: 767px) {
   .container {
+    width: 90%;
+    margin: 0 auto;
     padding-left: 50px;
   }
   .container .info-image {
@@ -146,51 +148,51 @@ header h1 {
     margin-bottom: 10px;
   }
 }
-/*@media (min-width: 320px) and (max-width: 480px) {
-}*/
-.container {
-  padding-left: 50px;
-}
-.container .info-image {
-  width: 130px;
-  height: 130px;
-  justify-content: center;
-  display: inline-grid;
-  left: 10%;
-  position: relative;
-}
-.container .info-image img {
-  border-radius: 75px;
-}
-.container .form-profile {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  font-size: 15px;
-}
-.container .form-profile .form-left {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-.container .form-profile .form-right {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin-left: 0;
-}
-.container .form-profile .submit {
-  background-color: #4b68e7;
-  border: 1px solid #4b68e7;
-  font-size: 17px;
-  padding: 10px 20px;
-  border-radius: 35px;
-  position: absolute;
-  top: 750px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding-left: 50px;
+  }
+  .container .info-image {
+    width: 130px;
+    height: 130px;
+    justify-content: center;
+    display: inline-grid;
+    left: 10%;
+    position: relative;
+  }
+  .container .info-image img {
+    border-radius: 75px;
+  }
+  .container .form-profile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  .container .form-profile .form-left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .form-profile .form-right {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .container .form-profile .submit {
+    background-color: #4b68e7;
+    border: 1px solid #4b68e7;
+    font-size: 17px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    position: absolute;
+    top: 750px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=modal.css.map */
