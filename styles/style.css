@@ -17,12 +17,14 @@ a:hover {
 
 header {
   background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+  width: 100%;
 }
 header .mini-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 40px;
+  width: auto;
 }
 header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mini-menu .fas {
   color: #999;
@@ -61,6 +63,116 @@ header .mini-menu .logo img {
   margin-right: 10px;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .container-add-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .container-add-user h2 {
+  color: #1f1f1f;
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: 5vw;
+}
+.container .container-add-user .btn-new {
+  background-color: #667eea;
+  border: 1px solid #667eea;
+  border-radius: 50px;
+  height: 35px;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.container .container-add-user .btn-new:hover {
+  background-color: #4b68e7;
+  border: 1px solid #4b68e7;
+  color: #fff;
+}
+.container .container-add-user .btn-new h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 4px auto;
+}
+.container .container-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .container-search input {
+  height: 40px;
+  min-width: 30vw;
+  padding: 2px 12px 2px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.4;
+}
+.container .container-search .search-btn {
+  background-color: #55ce63;
+  border: 1px solid #55ce63;
+  height: 40px;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+.container .container-search .search-btn h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 4px auto;
+}
+.container .container-staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  align-content: space-between;
+  margin-top: 10px;
+}
+.container .container-staff .profile {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 20px;
+  width: auto;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.container .container-staff .profile .profile-edit {
+  float: right;
+  cursor: pointer;
+}
+.container .container-staff .profile .profile-edit .fa-tools {
+  opacity: 0.4;
+}
+.container .container-staff .profile .profile-edit .fa-tools:hover {
+  opacity: 0.9;
+}
+.container .container-staff .profile .profile-img {
+  background-image: url(../styles/images/admin.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  margin: 5px auto;
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
   .mini-menu {
     display: flex;
@@ -73,11 +185,13 @@ header .mini-menu .logo img {
   }
   .mini-menu .main-logo {
     display: none;
+    padding-left: 0px;
   }
   .mini-menu .logo-mobile {
     display: flex;
     order: 3;
     flex: 0 1 auto;
+    padding-left: 0px;
   }
   .mini-menu .logo-mobile .fa-bars::before {
     font-size: 25px;
@@ -92,6 +206,24 @@ header .mini-menu .logo img {
     flex: 0 1 auto;
     align-self: auto;
   }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .container-staff {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    /* align-content: space-between; */
+    margin-top: 10px;
+  }
+  .container .container-staff .profile {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .mini-menu {
@@ -103,13 +235,15 @@ header .mini-menu .logo img {
     align-items: flex-start;
     align-self: auto;
   }
-  .mini-menu .logo {
+  .mini-menu .main-logo {
     display: none;
+    padding-left: 0px;
   }
   .mini-menu .logo-mobile {
     display: flex;
     order: 1;
     flex: 0 1 auto;
+    padding-left: 0;
   }
   .mini-menu .logo-mobile .fa-bars::before {
     font-size: 25px;
@@ -118,6 +252,23 @@ header .mini-menu .logo img {
     order: 2;
     flex: 0 1 auto;
     align-self: auto;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .container-staff {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .container .container-staff .profile {
+    display: flex;
+    flex-direction: column;
   }
 }
 
