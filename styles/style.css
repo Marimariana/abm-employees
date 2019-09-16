@@ -224,6 +224,10 @@ header .mini-menu .logo img {
     display: flex;
     flex-direction: column;
   }
+  .container .container-staff .profile .fa-tools {
+    position: absolute;
+    bottom: 5px;
+  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .mini-menu {

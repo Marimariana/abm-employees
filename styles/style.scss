@@ -239,6 +239,10 @@ header{
             display: flex;
             flex-direction: column;
             //flex-wrap: nowrap;
+            .fa-tools{
+            position: absolute;
+            bottom: 5px;
+            }
         }
     }
 }
