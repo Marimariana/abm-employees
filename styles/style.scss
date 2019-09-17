@@ -153,7 +153,7 @@ header{
        border-radius: 4px;
        margin: 20px;
        padding: 20px;
-       width: auto;
+       width: 20%;
        text-align: center;
        position: relative;
        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -229,18 +229,14 @@ header{
     margin: 0 auto;
     .container-staff{
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         box-sizing: border-box;
-        /* align-content: space-between; */
         margin-top: 10px;
         .profile{
-            display: flex;
-            flex-direction: column;
-            //flex-wrap: nowrap;
+            width: 30%;
             .fa-tools{
-            position: absolute;
             bottom: 5px;
             }
         }
@@ -296,6 +292,17 @@ header{
         .profile{
             display: flex;
             flex-direction: column;
+            width: auto;
+            .fa-tools{
+                position: absolute;
+                right: 24px;
+            }
+            h4{
+                margin-bottom: 5px;
+            }
+            p{
+                margin-top: 5px;
+            }
         }
     }
 }
