@@ -25,7 +25,7 @@ function saveUser (req, res){
     console.log('POST /api/user')
  console.log(req.body)
 
-  let user = new User()
+  let user = new User () || (req.body)
   user.firstName = req.body.firstName
   user.lastName = req.body.lastName
   user.address = req.body.address
@@ -33,12 +33,18 @@ function saveUser (req, res){
   user.email = req.body.email
   user.gender = req.body.gender
 
-
-  user.save((err, userStored) =>{
+  /*user.save((err, userStored) =>{
     if (err) res.status(500).send({message: `Error al guardar en la base de datos: ${err}`})
 
     res.status(200).send({user: userStored})
   })
+}*/
+
+user.save((err, userStored) =>{
+  if (err) res.status(500).send({message: `Error al guardar en la base de datos el usuario con email ${user.email}: ${err}`})
+
+  res.status(200).send({user: userStored})
+})
 }
 
 function updateUser (req, res){

@@ -21,7 +21,7 @@
         <form action="/public/users" method="POST" class="form-profile">
             <div class="form-left">
             <label>First Name</label>
-            <input type="text" class="fname" value="John">
+            <input type="text" class="fname" name="firstName" value="John">
             <label>Gender</label>
             <select>
                 <option value="Male" selected>Male</option>></option>></option>
@@ -29,15 +29,15 @@
                 <option value="Others">Others</option>
             </select>
             <label>Address</label>
-            <input type="text" class="address" value="Pellegrini 887">
+            <input type="text" class="address" name="address" value="Pellegrini 887">
             </div>
             <div class="form-right">
             <label>Last Name</label>
-            <input type="text" class="lname" value="Doe">
+            <input type="text" class="lname" name="lastName" value="Doe">
             <label>E-mail</label>
-            <input type="email" class="email" value="mail@mail.com">
+            <input type="email" class="email" name="email" value="mail@mail.com">
             <label>Phone Number</label>
-            <input type="number" class="phone-number" value="1164672727">
+            <input type="number" class="phone-number" name="phoneNumber" value="1164672727">
             </div>
             <button class="submit">Submit</button>
         </form>
