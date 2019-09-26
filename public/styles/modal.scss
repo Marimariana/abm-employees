@@ -2,6 +2,7 @@
 
 body{
     margin: 0 auto;
+    height: auto;
     width: 90%;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -35,6 +36,7 @@ header{
 .container{
 width: 90%;
 margin: 0 auto;
+height: auto;
 
 .info-image{
     width: 130px;
@@ -101,7 +103,8 @@ margin: 0 auto;
         font-size: 17px;
         padding: 10px 20px;
         border-radius: 35px;
-        position: absolute;
+        clear: both;
+        //position: absolute;
         top: 550px;
         }
 
@@ -112,9 +115,10 @@ margin: 0 auto;
 @media (min-width: 481px) and (max-width: 767px) {
 
     .container{
-        width: 90%;
-        margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
     padding-left: 50px;
+    height: auto;
     .info-image{
         width: 130px;
         height: 130px;
@@ -151,7 +155,8 @@ margin: 0 auto;
     font-size: 17px;
     padding: 10px 20px;
     border-radius: 35px;
-    position: absolute;
+    clear: both;
+    //position: absolute;
     top: 750px;
     margin-bottom: 10px;
     }
@@ -166,8 +171,8 @@ margin: 0 auto;
 
 .container{
     margin: 0 auto;
-    width: 100vh;
     padding-left: 50px;
+    height: auto;
     .info-image{
         width: 130px;
         height: 130px;

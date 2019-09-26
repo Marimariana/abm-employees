@@ -74,6 +74,7 @@ header{
 .container {
     width: 90%;
     margin: 0 auto;
+    height: auto;
     .container-add-user {
        display: flex;
        flex-direction: row;
@@ -188,6 +189,7 @@ header{
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+
     .mini-menu{
         display:flex;
         flex-direction: row;
@@ -227,6 +229,7 @@ header{
 .container{
     width: 90%;
     margin: 0 auto;
+    height: auto;
     .container-staff{
         display: flex;
         flex-direction: row;

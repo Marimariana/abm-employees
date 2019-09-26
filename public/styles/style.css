@@ -66,6 +66,7 @@ header .mini-menu .logo img {
 .container {
   width: 90%;
   margin: 0 auto;
+  height: auto;
 }
 .container .container-add-user {
   display: flex;
@@ -210,6 +211,7 @@ header .mini-menu .logo img {
   .container {
     width: 90%;
     margin: 0 auto;
+    height: auto;
   }
   .container .container-staff {
     display: flex;
