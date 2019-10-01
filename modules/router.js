@@ -21,3 +21,9 @@ router.get('/api/user/:id', users.getUserById)
 router.post('/api/user', users.postUser)
 router.patch('/api/user', users.patchUser)
 router.delete('/api/user/:id', users.deleteUser)
+
+
+
+
+
+module.exports = router

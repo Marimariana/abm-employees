@@ -4,28 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "uniqid": "^5.0.3"
-=======
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "crypto": "^1.0.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mongodb": "^3.3.2",
-    "mongoose": "^5.7.1",
-    "nodemon": "^1.19.2"
->>>>>>> 4ed5d501478dd119854b28539f9bdcbd8cc4903f
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "morgan": "1.9.1",
+    "uniqid": "5.0.3"
   }
 }

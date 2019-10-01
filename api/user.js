@@ -29,3 +29,26 @@ const getUserById = (req, res, next) =>{
     }else{
         res.status(404).json('no encontramos al usuario')
     }
+    next()
+}
+
+const patchUser = (req, res, next) =>{
+    let newUser = req.body
+    let oldUser = users.find(e => e.id === req.body.id)
+    let oldIndex = users.findIndex(e => e.id === req.body.id)
+    let editUser = {...oldUser, ...newUser}
+    users.splice(oldIndex, 1)
+    users.push(editUser)
+    res.json(`Se edito el empleado con id ${req.body.id}`)
+    next()
+}
+
+const deleteUser = (req, res, next) =>{
+    let user = users.find(e=>e.id === req.params.id)
+    let index = users.findIndex(e=>e.id === req.params.id)
+    users.splice(index, 1)
+    res.json(`Se elimino el empleado ${user.name} con id ${req.params.id}`)
+    next()
+}
+
+module.exports = { getUser, postUser, getUserById , patchUser, deleteUser }
