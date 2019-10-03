@@ -9,11 +9,9 @@ router.use(logger('dev'))
 
 //pages routes
 router.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname,'../pages/users.html'))
+    res.sendFile(path.join(__dirname,'../public/users.html'))
 })
-router.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname,'../pages/modal.html'))
-})
+
 
 //api routes
 router.get('/api/user', users.getUser)

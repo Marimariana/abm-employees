@@ -11,13 +11,11 @@ const printUsers = (users) =>{
 
         profilEdit.appendChild(profile)
 
-        h4.appendChild((e.users.name))
-        p.appendChild((e.users.email))
-        p.appendChild((e.users.address))
-        p.appendChild((e.users.phone))
+        h4.appendChild(createTd(e.name))
+        p.appendChild(createTd(e.email))
+        p.appendChild(createTd(e.address))
+        p.appendChild(createTd(e.phone))
 
-        const edit = document.createElement('a')
-        edit.appendChild(createBtn(e.id, 'edit', `<i class="fas fa-tools" title="Delete">&#xE872;</i>`))
        a.appendChild(h4)
        a.appendChild(p)
        profilEdit.appendChild(edit)
@@ -78,6 +76,12 @@ const addUser = () =>{
     }
 }
 
+const createTd = (text) =>{
+    const td = document.createElement('td')
+    td.innerText = text
+    return td
+}
+
 const validateForm = (name, email, address, phone) =>{
     if(validateName(name)){
         if(validateEmail(email)){
@@ -136,8 +140,7 @@ const searchUser = () =>{
         .then(res=>console.log(res))
 }
 
-const filterById = () =>{
-    innerHTMLCleaner('idNotFound')
+const searchUser = () =>{
     const filter = document.getElementById('filter').value
     fetch(`/api/user/${filter}`)
         .then(res => res.json())
@@ -145,7 +148,6 @@ const filterById = () =>{
             if(typeof res === 'object'){
                 inputCleaner('filter')
                 cleanDiv()
-                oneObjectTable(res)
             }else{
                 filterError(res)
             }
@@ -153,10 +155,6 @@ const filterById = () =>{
 
 }
 
-const inputCleaner = (inputId) =>{
-    const input = document.getElementById(inputId)
-    input.value = ''
-}
 
 const innerHTMLCleaner = (elementId) =>{
     const element = document.getElementById(elementId)
