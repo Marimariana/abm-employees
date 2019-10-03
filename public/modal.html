@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Information</title>
+    <link href="../styles/modal.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <i class="fas fa-times-circle"></i>
+        <h1>Profile Information</h1>
+    </header>
+    <div class="container">
+        <div class="info-image">
+        <img src="../styles/images/admin.jpg">
+         </div>
+        <form action="/public/users" method="POST" class="form-profile">
+            <div class="form-left">
+            <label>First Name</label>
+            <input type="text" class="fname" name="firstName" value="John">
+            <label>Gender</label>
+            <select>
+                <option value="Male" selected>Male</option>></option>></option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+            <label>Address</label>
+            <input type="text" class="address" name="address" value="Pellegrini 887">
+            </div>
+            <div class="form-right">
+            <label>Last Name</label>
+            <input type="text" class="lname" name="lastName" value="Doe">
+            <label>E-mail</label>
+            <input type="email" class="email" name="email" value="mail@mail.com">
+            <label>Phone Number</label>
+            <input type="number" class="phone-number" name="phoneNumber" value="1164672727">
+            </div>
+            <button class="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

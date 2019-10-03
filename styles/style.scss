@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f7f7f7;
+}
+
+
+
+a{
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    &:hover{
+    color: #999;
+}
+
+}
+
+header{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 960px;
+     .mini-menu{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: 40px;
+            ul, .fab, .far, .fas {
+            color: #999;
+            font-size:14px;
+            text-decoration: none;
+            list-style: none;
+            margin: 5px 10px;
+            padding:0;
+        }
+    }
+}
+
+.logo{
+    display:flex;
+    flex: 2 1 auto;
+    i, li{
+    margin: 0 5px; 
+    }
+}
+
+.admin{
+    display: flex;
+    flex-direction: row;
+    flex:1 1;
+    font-size: 12px;
+    img{
+        width:35px;
+        height: 35px;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+//Container content
+ .container {
+     padding: 35px;
+     .container-add-user {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            color: #1f1f1f;
+            font-size: 26px;
+            font-weight: 500;
+            margin-left: 5vw;
+        }
+        .btn-new {
+            background-color: #667eea;
+            border: 1px solid #667eea;
+            border-radius: 50px;
+            height: 35px;
+            min-width: 140px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            &:hover{
+                background-color: #4b68e7;
+                border: 1px solid #4b68e7;
+                color: #fff;
+            }
+            h2 {
+                color: #fff;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 4px auto;
+            }
+        }
+     }
+     .container-search {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+         input{
+            height: 40px;
+            min-width: 30vw;
+            padding: 2px 12px 2px;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.4;
+        }
+        .search-btn {
+            background-color: #55ce63;
+            border: 1px solid #55ce63;
+            height: 40px;
+            min-width: 140px;
+            display: flex;
+            justify-content: center;
+            margin-left: 20px;
+            h2 {
+                color: #fff;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 4px auto;
+            }
+        }
+
+    }
+    .container-staff {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     box-sizing: border-box;
+     align-content: space-between;
+     margin-top: 10px;
+      .profile {
+        background-color: #fff;
+        border: 1px solid #ededed;
+        border-radius: 4px;
+        margin: 20px;
+        padding: 20px;
+        width: 20vw;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        .profile-edit {
+            float: right;
+            cursor: pointer;
+            .fa-tools {
+                opacity: 0.4;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+         .profile-img {
+             background-image: url(../styles/images/admin.jpg);
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+             height: 80px;
+             width: 80px;
+             border-radius: 40px;
+             margin: 5px auto;
+         }
+      }
+    }
+    
+ }

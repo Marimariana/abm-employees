@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Employees</title>
     <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <script src="../js/main.js" type="text/javascript"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
+
+<body onload="initialize()">
     <header>
         <div class="mini-menu">
-            <ul class="logo">
-                <li><i class="fas fa-map-marker-alt"></i> Logo</li>
+            <a class="logo"><img src="/abm-employees/public/styles/images/logo-papitomirey.jpg"></a>
+            <ul class="main-logo">
+                <li><i class="far fa-envelope"></i> help@papitomirey.co</li>
+            </ul>
+            <ul class="logo-mobile">
+                <li><i class="fas fa-bars"></i></li>
             </ul>
             <ul class="admin">
-                <li><i class="far fa-envelope"></i> help@papitomirey.co</li>
-                <li><span class="admin-logo"><img src="../styles/images/admin.jpg">Admin</span></li>
+                <li><i class="fas fa-crown"></i>Admin</li>
+                <li><img src="/abm-employees/public/styles/images/admin.jpg"></li>
             </ul>
         </div>
     </header>
-    <div>
+    <div class="container">
+        <div class="container-add-user">
+            <h2>Equipo</h2>
+            <form>
+                <label for="name">Nombre</label>
+                <input name="name" id="name" placeholder="Nombre">
+                <span id="nameError" class="inputError"></span>
+                <label for="email">Email</label>
+                <input name="email" id="email" placeholder="Email">
+                <span id="emailError" class="inputError"></span>
+                <label for="address">Dirección</label>
+                <input name="address" id="address" placeholder="Dirección">
+                <span id="addressError" class="inputError"></span>
+                <label for="phone">Telefono</label>
+                <input name="phone" id="phone" placeholder="Número de telefono">
+                <span id="phoneError" class="inputError"></span>
+            </form>
+            <a href="#" class="btn-new" onclick="addUser()">
+                <h2>+ Añadir</h2>
+            </a>
+        </div>
+        <div class="container-search"> <input type="text" placeholder="Nombre" id="search"
+                onkeypress="handleKeyPress(event)"><a class="search-btn" onclick="searchUser()">
+                <h2>Buscar</h2>
+            </a></div>
+        <div class="container-staff" id="container">
+            <div class="profile">
+                <div class="profile-edit">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <a href=#>
+                    <h4>Eugenia Saraso</h4>
+                    <p>Team Leader</p>
+                </a>
+            </div>
+        </div>
 
     </div>
 </body>
+
 </html>

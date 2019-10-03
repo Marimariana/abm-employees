@@ -1,19 +1,19 @@
-const http = require('http');
-const port = 3000;
+const express = require('express')
+const logger = require('morgan')
+const server = express()
+const router = require('./modules/router')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const port = 3000
 
-const handle = (req, res) => {
-  res.writeHead(200, {
-    'Content-Type': 'text/plain'
-  });
-  res.end('Hola Mundo, no está trucado!');
-};
+server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json())
 
-const server = http.createServer(handle);
+server.use(logger('dev'))
+server.use('/', router)
+server.use(express.static('public'))
+server.use(cors)
 
-server.listen(port, err => {
-  if (err) {
-    return console.log('explotó algo al poner el server a la escucha', err)
-  }
-
-  console.log(`el servidor esta a la escucha en el puerto ${port}`)
-});
+server.listen(port, () =>{
+    console.log(`El servidor esta a la escucha en el puerto ${port}`)
+})

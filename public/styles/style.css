@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-
-=======
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #333333;
-  background-color: #f7f7f7;
 }
 
 a {
@@ -20,18 +16,15 @@ a:hover {
 }
 
 header {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  max-width: 960px;
+  background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+  width: 100%;
 }
 header .mini-menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   line-height: 40px;
+  width: auto;
 }
 header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mini-menu .fas {
   color: #999;
@@ -39,21 +32,27 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
   text-decoration: none;
   list-style: none;
   margin: 5px 10px;
-  padding: 0;
+}
+header .mini-menu .logo img {
+  width: 75px;
+  height: 20px;
 }
 
-.logo {
+.main-logo {
   display: flex;
   flex: 2 1 auto;
 }
-.logo i, .logo li {
+.main-logo i, .main-logo li {
   margin: 0 5px;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 .admin {
   display: flex;
   flex-direction: row;
-  flex: 1 1;
   font-size: 12px;
 }
 .admin img {
@@ -65,7 +64,9 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
 }
 
 .container {
-  padding: 35px;
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
 }
 .container .container-add-user {
   display: flex;
@@ -146,7 +147,7 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
   border-radius: 4px;
   margin: 20px;
   padding: 20px;
-  width: 20vw;
+  width: 20%;
   text-align: center;
   position: relative;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
@@ -172,6 +173,117 @@ header .mini-menu ul, header .mini-menu .fab, header .mini-menu .far, header .mi
   border-radius: 40px;
   margin: 5px auto;
 }
->>>>>>> 48d0ea17c2ff90d1f2d26f56a2b22a3439593357
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .mini-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-start;
+    align-self: auto;
+  }
+  .mini-menu .main-logo {
+    display: none;
+    padding-left: 0px;
+  }
+  .mini-menu .logo-mobile {
+    display: flex;
+    order: 3;
+    flex: 0 1 auto;
+    padding-left: 0px;
+  }
+  .mini-menu .logo-mobile .fa-bars::before {
+    font-size: 25px;
+  }
+  .mini-menu .logo-mobile .admin {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+  .mini-menu .logo-mobile .logo {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .container .container-staff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .container .container-staff .profile {
+    width: 30%;
+  }
+  .container .container-staff .profile .fa-tools {
+    bottom: 5px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .mini-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-start;
+    align-self: auto;
+  }
+  .mini-menu .main-logo {
+    display: none;
+    padding-left: 0px;
+  }
+  .mini-menu .logo-mobile {
+    display: flex;
+    order: 1;
+    flex: 0 1 auto;
+    padding-left: 0;
+  }
+  .mini-menu .logo-mobile .fa-bars::before {
+    font-size: 25px;
+  }
+  .mini-menu .logo-mobile .admin {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .container-staff {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .container .container-staff .profile {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .container .container-staff .profile .fa-tools {
+    position: absolute;
+    right: 24px;
+  }
+  .container .container-staff .profile h4 {
+    margin-bottom: 5px;
+  }
+  .container .container-staff .profile p {
+    margin-top: 5px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
